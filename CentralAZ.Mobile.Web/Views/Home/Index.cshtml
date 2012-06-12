@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+    <div id="home-page" data-title="Central AZ Mobile - @ViewBag.Title" class="wrapper" data-role="page">
+		<div id="content" data-role="content">
+			<h1 class="heading logo"><a href="@Url.Action("Index", new { Controller = "Home" })" title="Central Christian Church">Central AZ</a></h1>
+			<a id="full-site" href="http://www.centralaz.com/arena/default.aspx?mobile=false" rel="external" target="_blank" title="Go To The Full Site">Go To The Full Site</a>
+			<ul class="navigation">
+				<li><a href="@Url.Action("Directions", new { Controller = "Home" })" title="Map &amp; Directions"><span>Map &amp; <br />Directions</span></a></li>
+				<li><a href="@Url.Action("ServiceTimes", new { Controller = "Home" })" title="Service Times"><span>Service <br />Times</span></a></li>
+				<li><a href="@Url.Action("Media", new { Controller = "Home" })" title="Media"><span>Media</span></a></li>
+				<li><a href="@Url.Action("Give", new { Controller = "Home" })" title="Give"><span>Give</span></a></li>
+				<li><a href="@Url.Action("Prayer", new { Controller = "Home" })" title="Need Prayer?"><span>Need <br />Prayer?</span></a></li>
+				<li><a href="@Url.Action("Expect", new { Controller = "Home" })" title="What To Expect"><span>What To <br />Expect</span></a></li>
+				<!--<li id="bottom" class="wide"><a href="@Url.Action( "Feedback", new { Controller = "Home" } )" title="Thanksgiving Eve"><span>Thanksgiving Eve</span></a></li>-->
+				<li id="bottom" class="wide"><a href="@Url.Action("Feedback", new { Controller = "Home" })" title="About CentralAZ Mobile"><span>About CentralAZ Mobile</span></a></li>
+
+			</ul>
+		</div>
+	</div>
+

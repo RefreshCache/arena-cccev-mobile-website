@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Media";
+}
+
+    <div id="media" class="wrapper" data-role="page">
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1>Media</h1>
+                <div class="loading"></div>
+                <ul id="series"></ul>
+
+                <script id="featuredMessage" type="text/x-jquery-tmpl">
+                    <li class="feature">
+                        <h2>This Week's Message</h2>
+                        <div>
+                            <img src="${ImageUrl}" alt="${Title}" />
+                            <h3><a href="#" rel="${EnclosureUrl}" title="${Title}" class="video">${Title}</a></h3>
+                            <p>${PublishDate} - ${Author}</p>
+                        </div>
+                    </li>
+                </script>
+
+                <script id="message" type="text/x-jquery-tmpl">
+                    <li>
+                        <h3><a href="#" rel="${EnclosureUrl}" title="${Title}" class="video">${Title}</a></h3>
+                        <p>${PublishDate} - ${Author}</p>
+                    </li>
+                </script>
+
+                <script type="text/javascript">
+                    $(function ()
+                    {
+                        CentralAZ_Mobile.initMedia();
+                    });
+                </script>
+            </div>
+		</div>
+	</div>
+

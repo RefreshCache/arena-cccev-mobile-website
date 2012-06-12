@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Thanksgiving Times";
+}
+
+    <div id="services" class="wrapper" data-role="page">
+
+        <script type="text/javascript">
+
+        	$(function () {
+        		//$.get("http://www.centralaz.com/Arena/default.aspx?page=4223&promotionId=1340")
+        		//$.get("../thanksgiving.html")
+        		$.get("/Arena/default.aspx?page=4223&promotionId=1340")
+					.success(function (data) {
+						var $data = $(data).find(".promoDetailWrap");
+						$("#special-times").append($data);
+						$("#special-times").find("img").remove();
+						$("iframe").width(452).height(300);
+						$(".loading").fadeOut(function () {
+							setTimeout('$("#special-times").fadeIn();', 500);
+						})
+					.error(function (data) {
+						alert("Unable to fetch information. Please visit full website.")
+					});
+					});
+        	});
+
+        </script>
+
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <div class="loading"></div>
+                <div id="special-times" style="color: #D1E8CF; line-height: 28px; font-size: 24px; text-align: left;"></div>
+            </div>
+		</div>
+	</div>

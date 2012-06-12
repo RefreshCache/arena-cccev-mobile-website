@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Service Times";
+}
+
+    <div id="services" class="wrapper" data-role="page">
+
+        <script type="text/javascript">
+
+            $(function ()
+            {
+                CentralAZ_Mobile.initServiceTimes();
+            });
+
+        </script>
+
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1 class="services">Service Times</h1>
+                <div class="loading"></div>
+                <div id="service-times"></div>
+            </div>
+		</div>
+	</div>

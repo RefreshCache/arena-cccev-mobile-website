@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Central AZ Mobile - @ViewBag.Title</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="@Url.Content("~/content/images/retina-icon.png")" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-startup-image" href="@Url.Content("~/content/images/startup.png")" />
+
+    <link href="@Url.Content("~/content/reset.css")" type="text/css" rel="stylesheet" />
+    <link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" type="text/css" rel="stylesheet" />
+    <link href="@Url.Content("~/content/common.css")" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/scripts/jquery.tmpl.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/scripts/jquery.iframe.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/scripts/centralaz-mobile.js")"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</head>
+
+<body>
+    @RenderBody()
+
+    <script type="text/javascript">
+        $('[data-role=page]').live('pageshow', function (event, ui)
+        {
+            try
+            {
+                var pageTracker = _gat._getTracker("UA-2410682-7");
+                pageTracker._trackPageview(event.target.id);
+            }
+            catch (err) { }
+        });
+    </script>
+</body>
+</html>

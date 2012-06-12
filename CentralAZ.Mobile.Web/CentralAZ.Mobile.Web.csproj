@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D73521F-2D8F-416E-B3D8-6C1A42AB6E19}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CentralAZ.Mobile.Web</RootNamespace>
+    <AssemblyName>CentralAZ.Mobile.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Arena.Framework">
+      <HintPath>..\..\Arena\bin\Arena.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc.Html5">
+      <HintPath>..\packages\MVCHtml5Toolkit.1.0.0\lib\System.Web.Mvc.Html5.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OnCampusController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\UiHelpers.cs" />
+    <Compile Include="Models\IPrayerRequestModelValidation.cs" />
+    <Compile Include="Models\PrayerRequestViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\common.css" />
+    <Content Include="Content\images\back-arrow.png" />
+    <Content Include="Content\images\bottom-cell.png" />
+    <Content Include="Content\images\down-arrow.png" />
+    <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\loading-big.gif" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\options-bubble.png" />
+    <Content Include="Content\images\retina-icon.png" />
+    <Content Include="Content\images\series.png" />
+    <Content Include="Content\images\startup.png" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\centralaz-mobile.js" />
+    <Content Include="Scripts\jquery-1.5-vsdoc.js" />
+    <Content Include="Scripts\jquery.iframe.js" />
+    <Content Include="Scripts\jquery.tmpl.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnCampus\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Directions.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\ServiceTimes.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Media.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Give.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Expect.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\CampusList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\PrayerThanks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Prayer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MobileHeading.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\CategoryLuid.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnCampus\CampusMap.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnCampus\GoingOn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnCampus\Live.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OnCampus\Serve.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\MediaPlayer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Feedback.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\FeedbackThanks.cshtml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="BuildPackageZip">
+  </Target>
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <!-- Define a builds folder where the zipped releases will be put -->
+  <PropertyGroup>
+    <BuildDir>..\builds</BuildDir>
+  </PropertyGroup>
+  <!-- Clean old stuff -->
+  <Target Name="DeleteFiles">
+    <ItemGroup>
+      <OldFiles Include="$(BuildDir)\mobile\**" />
+    </ItemGroup>
+    <Delete Files="@(OldFiles)" />
+  </Target>
+  <!-- Create a deployable "mobile" folder with the necessary files -->
+  <Target Name="CopyToMobile" DependsOnTargets="DeleteFiles">
+    <MakeDir Directories="$(BuildDir)\mobile" Condition="!Exists('$(BuildDir)\mobile')" />
+    <MakeDir Directories="$(BuildDir)\mobile\bin" Condition="!Exists('$(BuildDir)\mobile\bin')" />
+    <MakeDir Directories="$(BuildDir)\mobile\Content" Condition="!Exists('$(BuildDir)\mobile\Content')" />
+    <MakeDir Directories="$(BuildDir)\mobile\Scripts" Condition="!Exists('$(BuildDir)\mobile\Scripts')" />
+    <MakeDir Directories="$(BuildDir)\mobile\Views" Condition="!Exists('$(BuildDir)\mobile\Views')" />
+    <ItemGroup>
+      <BinFiles Include="$(OutputPath)\*.dll" />
+      <ContentFiles Include=".\Content\**\*.*" />
+      <ScriptsFiles Include=".\Scripts\**\*.*" />
+      <ViewsFiles Include=".\Views\**\*.*" />
+      <RootFiles Include=".\*.asax;Web.Release.config" />
+    </ItemGroup>
+    <Message Text="Copying DLLs..." />
+    <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\mobile\bin" />
+    <Message Text="Copying Content folder..." />
+    <Copy SourceFiles="@(ContentFiles)" DestinationFolder="$(BuildDir)\mobile\Content" />
+    <Message Text="Copying Scripts folder..." />
+    <Copy SourceFiles="@(ScriptsFiles)" DestinationFolder="$(BuildDir)\mobile\Scripts" />
+    <Message Text="Copying Views..." />
+    <Copy SourceFiles="@(ViewsFiles)" DestinationFolder="$(BuildDir)\mobile\Views" />
+    <Message Text="Copying Root Files..." />
+    <Copy SourceFiles="@(RootFiles)" DestinationFolder="$(BuildDir)\mobile" />
+  </Target>
+  <!-- Create the package zip file -->
+  <Target Name="BuildPackageZip" DependsOnTargets="CopyToMobile" Condition="'$(Configuration)' == 'Release'">
+    <ItemGroup>
+      <ZipFiles Include="$(BuildDir)\mobile\**" />
+    </ItemGroup>
+    <Version BuildType="Automatic" RevisionType="Automatic" Major="2012" Minor="1">
+      <Output TaskParameter="Major" PropertyName="Major" />
+      <Output TaskParameter="Minor" PropertyName="Minor" />
+      <Output TaskParameter="Build" PropertyName="Build" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </Version>
+    <Message Text="Version: $(Major).$(Minor).$(Build).$(Revision)" />
+    <Zip Files="@(ZipFiles)" WorkingDirectory="$(BuildDir)\mobile\" ZipFileName="$(BuildDir)\CentralAZ.Mobile.Web-$(Major).$(Minor).$(Build).$(Revision).zip" ZipLevel="9" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2771</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,38 @@
+﻿@using System.Web.Mvc.Html5
+@{
+    ViewBag.Title = "Tell Us What You Think";
+}
+
+    <div id="map-directions" class="wrapper" data-role="page">
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1>About CentralAZ Mobile</h1>
+                <div class="about">
+                    <h3>Not your ordinary mobile website</h3>
+                    <p>We've been hard at work building Central's new mobile website. Our goal is to bring Central's content to your mobile
+                    device in a fresh new way.</p>
+                    <p>This isn't the same type of mobile website you may be used to. We've chosen to build a web app, rather than separate
+                    mobile apps for iOS, Android and Blackberry. Although our mobile web app is really just a website, it's been lovingly
+                    built to look and feel like an app that you might download from the marketplace. In fact, you can add
+                    our icon to your home screen by tapping the options button in your mobile browser then "Add to Home Screen".</p>
+                    <img src="@Url.Content("~/Content/images/options-bubble.png")" height="137" width="239" class="bubble-left" alt="Add to Home Screen" />
+                    <p>We'll be releasing new features soon. So in the mean time, take a peek around. We hope you'll enjoy Central's content on your 
+                    mobile device. If you have any ideas on how we can make this even cooler, we'd love to hear from you. Please take a minute
+                    to fill out the form below to let us know how we're doing.</p>
+                <h1>Tell Us What You Think</h1>
+                <h3>Got a cool idea for Central's mobile website? Please tell us!</h3>
+                </div>
+                <div id="feedback-form">
+                    @using (Html.BeginForm()) {
+                        <div class="indent">
+                            @Html.TextBox("FeedbackName", null, new { placeholder = "Name" })
+                            @Html.Html5TextBox("FeedbackEmail", InputTypes.InputType.Email, new { placeholder = "Email", id = "FeedbackEmail" })
+                            @Html.TextArea("FeedbackMessage", new { placeholder = "Message" })
+                        </div>
+                        <a href="#" data-role="none" class="feedback-submit">Send</a>
+                    }
+                </div>
+            </div>
+		</div>
+	</div>

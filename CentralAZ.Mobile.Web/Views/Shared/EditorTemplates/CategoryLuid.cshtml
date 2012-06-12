@@ -1,0 +1,10 @@
+﻿@model string
+@using CentralAZ.Mobile.Web.Helpers
+
+<select name="CategoryLuid" id="CategoryLuid" data-native-menu="true">
+    <option value="">Select Category</option>
+    @foreach (var c in UiHelpers.ActivePrayerCategoryList)
+    {
+    <option value="@c.Key">@c.Value</option>
+    }
+</select>

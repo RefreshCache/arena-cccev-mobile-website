@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Thanksgiving Times";
+}
+
+    <div id="services" class="wrapper" data-role="page">
+
+        <script type="text/javascript">
+
+        	$(function () {
+        		//$.get("../thanksgiving.html")
+				$.get("/Arena/default.aspx?page=4223&promotionId=1340")
+					.success(function (data) {
+						var $data = $(data).find(".promoDetailWrap");
+						$("#service-times").append($data);
+						$("#service-times").find("img").remove();
+						$("iframe").width(452).height(300);
+						$(".loading").fadeOut(function () {
+							setTimeout('$("#service-times").fadeIn();', 500);
+						})
+					.error(function (data) {
+						alert("Unable to fetch information. Please visit full website.")
+					});
+					});
+        	});
+
+        </script>
+
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <div class="loading"></div>
+                <div id="service-times" style="color: #D1E8CF; line-height: 20px"></div>
+            </div>
+		</div>
+	</div>

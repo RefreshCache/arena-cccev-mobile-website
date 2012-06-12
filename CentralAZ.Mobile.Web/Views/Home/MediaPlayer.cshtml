@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Media Player";
+}
+
+    <div id="media-player" class="wrapper" data-role="page">
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1>Media Player</h1>
+                <div class="loading"></div>
+                <div class="player"></div>
+                <script id="video-player" type="text/x-jquery-tmpl">
+                    <iframe src="${url}" width="454" height="255" frameborder="0"></iframe>
+                </script>
+            </div>
+		</div>
+	</div>

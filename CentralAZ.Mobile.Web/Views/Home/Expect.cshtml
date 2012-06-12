@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "What To Expect";
+}
+
+    <div id="what-to-expect" class="wrapper" data-role="page">
+
+        <script type="text/javascript">
+
+            $(function ()
+            {
+                CentralAZ_Mobile.initExpect();
+            });
+
+        </script>
+
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1>What To Expect</h1>
+                <div class="loading"></div>
+                <div id="expectations"></div>
+            </div>
+		</div>
+	</div>
+

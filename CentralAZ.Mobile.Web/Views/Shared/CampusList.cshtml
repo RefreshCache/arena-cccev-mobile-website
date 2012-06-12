@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Campuses";
+}
+
+    <div id="campus-list" class="wrapper" data-role="page">
+		<div id="content" data-role="content">
+            <div id="main" class="campus-dialog">
+                <h1>Select Your Campus</h1>
+                <div class="loading"></div>
+                <ul class="campus-selector">
+                    <li class="cancel"><a href="@Url.Action("Index", new { Controller = "Home" })" data-rel="back"><span>Cancel</span></a></li>
+                </ul>
+
+                <script id="campusTemplate" type="text/x-jquery-tmpl">
+                    <li><a href="#" rel="${campusID}" class="campus"><span>${name} Campus</span></a></li>
+                </script>
+
+                <script type="text/javascript">
+                    $(function ()
+                    {
+                        CentralAZ_Mobile.initCampuses();
+                    });
+                </script>
+            </div>
+		</div>
+	</div>
+

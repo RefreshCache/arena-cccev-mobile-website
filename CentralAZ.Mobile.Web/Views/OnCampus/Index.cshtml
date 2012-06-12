@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+    <div id="on-campus" class="wrapper" data-role="page">
+		<div id="content" data-role="content">
+			<h1 class="heading logo"><a href="@Url.Action("Index", new { Controller = "Home" })" title="Central Christian Church" data-rel="back">Central AZ</a></h1>
+			<a id="full-site" href="http://www.centralaz.com/arena/#no-mobile" title="Go To The Full Site">Go To The Full Site</a>
+			<ul class="navigation">
+				<li><a href="@Url.Action("CampusMap", new { Controller = "OnCampus" })" title="Campus Map"><span>Campus <br />Map</span></a></li>
+				<li><a href="@Url.Action("GoingOn", new { Controller = "OnCampus" })" title="What's Going On?"><span>What's <br />Going On?</span></a></li>
+				<li><a href="@Url.Action("Live", new { Controller = "OnCampus" })" title="Live @@ Gilbert"><span>Live @@ <br /><span class="campus"></span></span></a></li>
+				<li><a href="@Url.Action("Give", new { Controller = "Home" })" title="Give"><span>Give</span></a></li>
+				<li><a href="@Url.Action("Prayer", new { Controller = "Home" })" title="Need Prayer?"><span>Need <br />Prayer?</span></a></li>
+				<li><a href="@Url.Action("Serve", new { Controller = "OnCampus" })" title="Serve"><span>Serve</span></a></li>
+				<li id="bottom" class="wide"><a href="@Url.Action("CheckIn", new { Controller = "OnCampus" })" title="Check Into An Event" data-rel="dialog" data-transition="pop"><span>Check Into An Event</span></a></li>
+			</ul>
+
+            <script type="text/javascript">
+                $(function ()
+                {
+                    CentralAZ_Mobile.initOnCampus();
+                });
+            </script>
+		</div>
+	</div>

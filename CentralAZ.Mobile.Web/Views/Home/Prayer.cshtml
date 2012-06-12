@@ -1,0 +1,40 @@
+﻿@model CentralAZ.Mobile.Web.Models.PrayerRequestViewModel
+@using System.Web.Mvc.Html5
+@{
+    ViewBag.Title = "Need Prayer?";
+}
+
+    <div id="need-prayer" class="wrapper" data-role="page">
+       <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1>Need Prayer?</h1>
+                <div id="prayer-form">
+                    @using (Html.BeginForm()) {
+                        <div class="indent">
+                            <h2>Contact Info</h2>
+                            @Html.TextBoxFor(m => m.FirstName, new { placeholder = "First Name" })
+                            @Html.TextBoxFor(m => m.LastName, new { placeholder = "Last Name" })
+                            @Html.Html5TextBoxFor(m => m.Email, InputTypes.InputType.Email, new { placeholder = "Email"}, null)
+
+                            <h2>Prayer Request</h2>
+                            @Html.EditorFor(m => m.CategoryLuid)
+                            @Html.TextAreaFor(m => m.PrayerRequest, new { placeholder = "Prayer Request" })
+                            @Html.CheckBoxFor(m => m.IsPrivate) @Html.LabelFor(m => m.IsPrivate)
+                            @Html.CheckBoxFor(m => m.EmailRespnse) @Html.LabelFor(m => m.EmailRespnse)
+                        </div>
+                        <a href="#" data-role="none" class="prayer-submit">Send</a>
+                    }
+                </div>
+            </div>
+		</div>
+
+        <script type="text/javascript">
+            $(function ()
+            {
+                CentralAZ_Mobile.initPrayer();
+            });
+        </script>
+
+	</div>
+

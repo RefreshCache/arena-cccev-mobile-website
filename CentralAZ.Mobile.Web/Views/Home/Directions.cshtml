@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Map & Directions";
+}
+
+    <div id="map-directions" class="wrapper" data-role="page">
+
+        <script type="text/javascript">
+            $(function ()
+            {
+                CentralAZ_Mobile.initDirections();
+            });
+        </script>
+
+        <div id="content" data-role="content">
+			@Html.Partial("MobileHeading")
+            <div id="main">
+                <h1>Map &amp; Directions</h1>
+                <div class="loading"></div>
+                <div id="directions"></div>
+            </div>
+		</div>
+	</div>
